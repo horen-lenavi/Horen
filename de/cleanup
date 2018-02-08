@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ -f "*~" ]; then
+  rm *~
+fi
+if [ -f "*.backup" ]; then
+  rm *.backup
+fi
+if [ -f *.aux ]; then
+  rm *.aux
+fi
+if [ -f *.idx ]; then
+  rm *.idx
+fi
+if [ -f *.ilg ]; then
+  rm *.ilg
+fi
+if [ -f *.ind ]; then
+  rm *.ind
+fi
+if [ -f *.log ]; then
+  rm *.log
+fi
+if [ -f *.out ]; then
+  rm *.out
+fi
+if [ -f *.toc ]; then
+  rm *.toc
+fi

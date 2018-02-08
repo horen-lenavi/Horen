@@ -1,0 +1,76 @@
+This file is to help people who keep translations of this document keep
+track of what changes I make to the grammar.
+
+2012-01-06 William Annis <wm.annis@gmail.com>
+
+	* Initial: conversion of all files to SVN.
+
+	* en/syntax.tex: fìtsap with intransitives; intransitive
+	reflexives; citations for "True Reflexives" section.
+
+	* en/changelog.tex: note intransitive updates
+
+2012-01-22 William Annis <wm.annis@gmail.com>
+
+	* en/pragma.tex: in the "Punch" subsection, cleaned up the quote
+	marks (which were unLaTeXish)
+
+
+2012-03-01 William Annis <wm.annis@gmail.com>
+
+	* en/l-and-s.tex: conversion to newer XeTeX/LuaTeX; this mostly
+	takes the form of dropping TIPA in favor of even more proper
+	Unicode; oh, if only XeTeX hadn't gone fatally goofy
+
+	* en/horen-lenavi.tex: conversion to LuaLaTeX
+
+	* en/intro.tex: conversion to LuaLaTeX
+
+	* en/makeit: conversion to LuaLaTeX
+
+2012-03-04 William Annis <wm.annis@gmail.com>
+
+	* en/lingop.tex: new info on sä-; reduplication section cleaned up
+
+	* en/syntax.tex: contrastive demonstratives; correlative
+	comparisons
+
+2012-03-18 William Annis <wm.annis@gmail.com>
+
+	* en/morphology.tex: fixed compound verb index item
+
+2012-03-20 William Annis <wm.annis@gmail.com>
+
+	* en/pragma.tex: added a section on poetic register
+
+2012-04-05 William Annis <wm.annis@gmail.com>
+
+	* en/syntax.tex: note that there are now eight leniting
+	adpositions.
+
+	* en/l-and-s.tex: note the new adposition sko is also leniting
+
+	* en/morphology.tex: clarify infix position in verb-verb compounds
+
+2012-04-07 William Annis <wm.annis@gmail.com>
+
+	* en/lingop.tex: added sections on -tswo and sna-; added citation
+	for -ìva suffix
+
+	* en/syntax.tex: note 'krra' not 'krr a'; make the footnote
+	explaining the relative clause 'head' more detailed; added a
+	subsection under "Referential Hierarchy" explaining about
+	transitivity for DO pivots; rename "Antipassive" section
+	"Ambitransitivity," since that is what Frommer's calling it, but
+	leave a comment about how it can be called "antipassive"; ad cite
+	to NTeri post for ambitransitive; added example from Spring Vocab
+	#1 to ambitransitive; add Ultxa cite for causative of
+	ambitransitive.
+
+2012-07-18 William Annis <wm.annis@gmail.com>
+
+	* en/l-and-s.tex: note pseudovowel monosyllabic verbs with
+	infixing (contraction, with <ei>)
+
+	* en/syntax.tex: new meaning of ìlä; kuma/akum, and with fìtxan;
+	new conditional example

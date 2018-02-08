@@ -1,0 +1,155 @@
+\documentclass[12pt,oneside]{book}
+\usepackage{fullpage}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX} 
+% load the tex-text font mapping by default 
+\setmainfont{Gentium Basic}
+\newfontfamily\gplus{Gentium Plus}
+\setmonofont{Courier New}
+
+% We're auf Deutsch at the moment!
+% Sorry, but polyglossia doesn't work entirely correctly, therefore I had
+% to resort to the package babel (the quotation marks malfunctioned).
+%\usepackage{polyglossia}
+\usepackage[german]{babel}
+%\setmainlanguage{german}
+
+% This must come before hyperref
+\usepackage{makeidx}
+\makeindex
+
+\usepackage{multicol}
+\makeatletter
+\renewenvironment{theindex}
+  {\if@twocolumn
+      \@restonecolfalse
+   \else
+      \@restonecoltrue
+   \fi
+   \setlength{\columnseprule}{0pt}
+   \setlength{\columnsep}{35pt}
+   \begin{multicols}{2}[\nchapter{\indexname}]      %Adjust the 2 for more columns
+   \markboth{\MakeUppercase\indexname}%
+            {\MakeUppercase\indexname}%
+   \thispagestyle{plain}
+   \setlength{\parindent}{0pt}
+   \setlength{\parskip}{0pt plus 0.3pt}
+   \relax
+   \let\item\@idxitem}%
+  {\end{multicols}\if@restonecol\onecolumn\else\clearpage\fi}
+\makeatother
+
+%% to use: \href{url}{link text}
+%\usepackage{hyperxmp}
+\usepackage{hyperref}
+\hypersetup{bookmarksopen=false,
+  pdfpagemode=UseNone,
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=black,    % no links for footnotes; URLs will still have color
+  pdftitle={Horen Lì'fyayä LeNa'vi: Ein Nachschlagewerk zur Grammatik},
+  pdfauthor={Olaf Martens},
+  pdfkeywords={Na'vi, Grammatik, Xenolinguistik, Xenoethik}%,
+  %pdfcopyright={Copyright (C) 2010 Willim S. Annis}
+}
+
+% More stylish referencing format: §2.1.3.1.
+\newcommand{\horenref}[1]{\hyperref[#1]{\S \textbf{\ref*{#1}}}}
+
+% \uline{important}   underlined text
+% \uuline{urgent}     double-underlined text
+% \uwave{boat}        wavy underline
+\usepackage{ulem}
+\usepackage{multirow}
+\usepackage{mdwlist}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{tipa}
+\usepackage{marginnote}
+
+% Better sectioning for this document.
+\usepackage[compact,rigidchapters,explicit]{titlesec}
+\setcounter{secnumdepth}{3}
+
+\titleformat{\chapter}[display]
+ {\normalfont\Large\filcenter}
+ {\titlerule[1pt]%
+  \vspace{1pt}%
+  \titlerule \vspace{1pc}%
+  \LARGE\thechapter. #1}
+ {1pc}
+ {\titlerule}
+\newcommand{\nchapter}[1]{\chapter{#1}\vskip5pc}
+
+%\titleformat{\section}[runin]{\normalfont\bfseries}{\thesection.}{.5em}{#1}[. { }]
+%\titlespacing{\section}{1ex}{1.5ex plus .1ex minus .2ex}{0pt}
+\titleformat{\section}[display]
+ {\normalfont\fillast}
+ {\normalfont\bfseries \thesection. #1}
+ {1ex minus .1ex}
+ {\small}
+\titlespacing{\section}{3pc}{*4}{-1em}[3pc]
+
+\titleformat{\subsection}[runin]{\normalfont\bfseries}{\thesubsection.}{.5em}{#1}[. { }]
+\titlespacing{\subsection}{1ex}{1.5ex plus .1ex minus .2ex}{0pt}
+
+\titleformat{\subsubsection}[runin]{\normalfont\bfseries\small}{\thesubsubsection.}{.5em}{}[ { }]
+\titlespacing{\subsubsection}{1ex}{1.5ex plus .1ex minus .2ex}{0pt}
+
+% Macros.
+\newcommand{\N}[1]{\textbf{#1}}     % for Na'vi
+% Annotate Na'vi examples as being from Paul or from a film.
+\newcommand{\Npawl}[1]{\marginpar{\small$\mathcal{F}$}\textbf{#1}}
+\newcommand{\Nfilm}[1]{\marginpar{\small$\mathcal{A}$}\textbf{#1}}
+%\newcommand{\Npawl}[1]{\marginpar{\small$F$}\textbf{#1}}
+%\newcommand{\Nfilm}[1]{\marginpar{\small$A$}\textbf{#1}}
+\newcommand{\D}[1]{\textit{#1}}     % for German
+\newcommand{\INF}[1]{$‹$#1$›$}      % infix notation
+\newcommand{\ACC}[1]{\uline{#1}}    % accenting
+\newcommand{\POINT}{\noindent\textbf{•} }
+\newcommand{\QUAESTIO}[1]{\textcolor{magenta}{#1}}
+
+% Citations for where the data comes from.
+% \nhorcitation{text}{date}{url}
+\newcommand{\nhorcitation}[3]{{\scriptsize{}\href{#3}{#1 (#2)}}}
+\newcommand{\NTeri}[2]{\nhorcitation{NT}{#1}{#2}}
+\newcommand{\LNWiki}[2]{\nhorcitation{Wiki}{#1}{#2}}
+\newcommand{\Ultxa}[2]{\nhorcitation{Ultxa}{#1}{#2}}
+\newcommand{\LanguageLog}{\nhorcitation{LangLog}{9/12/2009}{http://languagelog.ldc.upenn.edu/nll/?p=1977}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DRAFT
+%\usepackage{draftwatermark}
+%\SetWatermarkLightness{0.9}
+
+\begin{document}
+\frenchspacing
+%\reversemarginpar
+
+\title{Horen L\`i’fyay\"a leNa’vi\\Ein Nachschlagewerk zur Grammatik des Na’vi}
+\author{William S. Annis\footnote{\"Ubersetzt von Olaf Martens.}}
+\date{Version 1.19, \today
+    \footnote{Dieses Werk ist unter der Creative Commons 
+    Attribution-ShareAlike License, Version 3.0 lizenziert.
+    Wenn Sie eine Kopie davon einsehen m\"ochten,
+    \texttt{http://creativecommons.org/licenses/by-sa/3.0/}.}}
+\maketitle
+
+\setcounter{tocdepth}{2}
+\begin{multicols}{2}
+\tableofcontents
+\end{multicols}
+
+\input intro
+\input l-and-s
+\input morphology
+\input numbers
+\input lingop
+\input syntax
+\input pragma
+
+\appendix
+{\small \printindex}
+
+\input changelog
+
+\end{document}

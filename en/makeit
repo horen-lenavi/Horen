@@ -1,0 +1,14 @@
+#!/bin/bash
+# $Id: makeit,v 1.2 2010-09-06 13:35:53-05 annis Exp annis $
+# $Source: /Users/annis/Documents/Navi/horen/RCS/makeit,v $
+#
+# Ah, indexing.
+
+xelatex horen-lenavi
+makeindex  horen-lenavi
+xelatex horen-lenavi
+
+cp horen-lenavi.pdf ~/Desktop/WSA\ Sync/.
+
+# EOF
+
