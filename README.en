@@ -1,6 +1,6 @@
 This is the LaTeX source code for the Na'vi Reference Grammar found at
 
-    http://www.learnnavi.org/docs/horen-lenavi.pdf
+    http://files.learnnavi.org/docs/horen-lenavi.pdf
 
 This document depends on the XeTeX engine of LaTeX, for its UNICODE
 and font-handling capabilities.  Any reasonably modern distribution of
