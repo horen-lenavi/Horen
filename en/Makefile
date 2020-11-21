@@ -9,9 +9,6 @@
 	xelatex $< $@
 
 
-all: horen-lenavi.pdf copy
+all: horen-lenavi.pdf
 
 horen-lenavi.pdf: $(wildcard *.tex)
-
-copy:
-	cp horen-lenavi.pdf ~/Desktop/WSA\ Sync/.
