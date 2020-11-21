@@ -2,13 +2,19 @@
 #
 # This requires GNU make.
 
-# Run twice for cross references.
-%.pdf: %.tex
-	xelatex $< $@
-	makeindex $< $@
-	xelatex $< $@
+all: horen-lenavi
 
+horen-lenavi:
+	xelatex horen-lenavi
+	makeindex horen-lenavi
+	xelatex horen-lenavi
 
-all: horen-lenavi.pdf
-
-horen-lenavi.pdf: $(wildcard *.tex)
+clean:
+	rm *.ind
+	rm *.ilg
+	rm *.aux
+	rm *.out
+	rm *.idx
+	rm *.toc
+	rm *.log
+	rm *.pdf
