@@ -79,7 +79,7 @@ trilled [{\gplus r̩ː}], and \N{ll} is a syllabic [{\gplus l̩ː}].
   \item Any consonant may start a syllable.
   \item A consonant cluster of \N{f s ts} $+$ \N{p, t, k, px, tx, kx,
     m, n, ng, r, l, w, y} may start a syllable (e.g., \N{tslam}, \N{ftu}).
-  \item \N{Px tx kx p t k ' m n l r ng} may occur in syllable-final position.
+  \item \N{P t k px tx kx ' m n l r ng} may occur in syllable-final position.
   \item \N{Ts f s h v z w y} may \textit{not} occur in syllable-final position.
   \item There are no consonant clusters in syllable-final position.
   \item \label{l-and-s:pseudo-no-null} A syllable with a pseudovowel
@@ -88,6 +88,38 @@ trilled [{\gplus r̩ː}], and \N{ll} is a syllabic [{\gplus l̩ː}].
     (\horenref{l-and-s:lenition:pseudovowel}) and the declension of nouns
     (\horenref{morph:decl:pseudovowel}).
 \end{itemize*}
+
+\noindent A visual representation of these core syllable structure rules:
+
+\begin{center}\footnotesize
+\begin{tikzpicture}[every path/.style={>=latex},every node/.style={draw,rectangle}]
+\node[rounded corners,fill=gray!20,align=center] (sos) at (-4,1) {start of\\syllable};
+\node[align=center] (zero-onset) at (-0.5,2.5) { no onset\\consonant };
+\node[align=center,font=\bfseries] (onset) at (-0.25,1) {p t k px tx kx '\\ m n ng r l w y\\f v s z ts h};
+\node[font=\bfseries] (clust-c1) at (-2.5,-0.5) { f s ts };
+\node[align=center,font=\bfseries] (clust-c2) at (0,-0.5) {p t k px tx kx\\m n ng r l w y};
+\node[align=center] (vowel) at (3.5,2) { vowel or\\diphthong };
+\node (pseudovowel) at (3.5,0.5) { pseudovowel };
+\node[align=center,font=\bfseries] (final) at (6.25,2.5) {p t k px tx kx ’\\m n l r ng };
+\node[align=center] (zero-coda) at (6.25,1) { no final\\consonant };
+\node[rounded corners,fill=gray!20,align=center] (eos) at (8.75,1) { end of\\syllable };
+
+\draw[->] (sos) edge (clust-c1);
+  \draw[->] (sos) edge (onset);
+  \draw[->] (sos) edge (zero-onset);
+\draw[->] (clust-c1) edge (clust-c2);
+\draw[->] (zero-onset) edge (vowel);
+\draw[->] (clust-c2) edge (vowel);
+  \draw[->] (clust-c2) edge (pseudovowel);
+\draw[->] (onset) edge (vowel);
+  \draw[->] (onset) edge (pseudovowel);
+\draw[->] (vowel) edge (final);
+\draw[->] (final) edge (eos);
+\draw[->] (vowel) edge (zero-coda);
+\draw[->] (pseudovowel) edge (zero-coda);
+\draw[->] (zero-coda) edge (eos);
+\end{tikzpicture}
+\end{center}
 
 \subsubsection{} Since a syllable may lack a consonant onset or coda,
 it is not unusual to see several vowels next to each other in a word.
@@ -164,7 +196,7 @@ unusual capitalization when written out: \index{alphabet!spoken}
 \end{center}
 
 \subsubsection{} Vowels and diphthongs are simply pronounced and
-spelled as themselves.  The pseudovowels take a leading glottal stop,
+spelled as themselves.  The pseudo\-vowels take a leading glottal stop,
 since they require a consonant onset (\horenref{l-and-s:pseudo-no-null}).
 
 \subsubsection{} The name for consonants which cannot end a syllable
