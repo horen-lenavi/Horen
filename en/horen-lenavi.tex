@@ -2,11 +2,9 @@
 \usepackage{fullpage}
 \usepackage{fontspec}
 \usepackage{babel}
-\defaultfontfeatures{Ligatures=TeX} 
-% load the tex-text font mapping by default 
-\setmainfont{Gentium Basic}
+\defaultfontfeatures{Ligatures=TeX} % load the tex-text font mapping by default 
+\setmainfont{Libertinus Serif}
 \setmonofont{Courier New}
-\newfontfamily\gplus{Gentium Plus}
 \usepackage{tikz}
 
 % This must come before hyperref
@@ -44,8 +42,7 @@
   linkcolor=black,    % no links for footnotes; URLs will still have color
   pdftitle={Horen Lì'fyayä LeNa'vi: a Reference Grammar},
   pdfauthor={William S. Annis},
-  pdfkeywords={Na'vi, grammar, xenolinguistics, xenoethology}%,
-  %pdfcopyright={Copyright (C) 2010 Willim S. Annis}
+  pdfkeywords={Na'vi, grammar, xenolinguistics, xenoethology}
 }
 
 % More stylish referencing format: §2.1.3.1.
@@ -59,7 +56,6 @@
 \usepackage{mdwlist}
 \usepackage{color}
 \usepackage{multicol}
-%\usepackage{tipa}
 \usepackage{marginnote}
 
 % Better sectioning for this document.
@@ -91,12 +87,28 @@
 \titleformat{\subsubsection}[runin]{\normalfont\bfseries\small}{\thesubsubsection.}{.5em}{}[ { }]
 \titlespacing{\subsubsection}{1ex}{1.5ex plus .1ex minus .2ex}{0pt}
 
+% For interlinears.
+\usepackage{gb4e}
+\noautomath     % keep _ and ^ as normal, please
+\let\eachwordone=\bf
+\let\eachwordtwo=\footnotesize
+\let\eachwordthree=\footnotesize
+% The spacing is wasteful in the default interlinear example environment.
+\newenvironment{interlin}%
+  {\begin{exe}%
+   \ex\ignorespaces}%
+  {\end{exe}\ignorespacesafterend}
+\renewcommand{\trans}[1]{\glt \textit{#1}}
+
+
 % Macros.
 \newcommand{\N}[1]{\textbf{#1}}     % for Na'vi
 % Annotate Na'vi examples as being from Paul or from a film.
 \newcommand{\Npawl}[1]{\marginpar{\small$\mathcal{F}$}\textbf{#1}}
+\newcommand{\Ipawl}{\marginpar{\small$\mathcal{F}$}}
 \newcommand{\Nfilm}[1]{\marginpar{\small$\mathcal{A}$}\textbf{#1}}
 \newcommand{\E}[1]{\textit{#1}}     % for English
+\newcommand{\I}[1]{\textsc{#1}}     % for Interlinears
 \newcommand{\INF}[1]{$‹$#1$›$}      % infix notation
 \newcommand{\ACC}[1]{\uline{#1}}    % accenting
 \newcommand{\POINT}{\noindent\textbf{•} }
@@ -118,7 +130,7 @@
 
 \title{Horen Lì'fyayä leNa'vi\\A Reference Grammar of Na'vi}
 \author{William S. Annis}
-\date{Version 1.29, \today\footnote{This work is licensed
+\date{Version 1.30, \today\footnote{This work is licensed
     under the Creative Commons Attribution-ShareAlike License, version
     4.0.  To view a copy of this license, visit 
     \texttt{http://creativecommons.org/licenses/by-sa/4.0/}.}}
@@ -136,6 +148,7 @@
 \input lingop
 \input syntax
 \input pragma
+\input semantics
 
 \appendix
 {\small \printindex}
