@@ -8,9 +8,9 @@ TeX should include XeTeX, though TeXLive is a good choice.
 
     http://www.tug.org/texlive/
 
-You will, finally, need the font Gentium Basic, available from SIL,
+You will, finally, need the font Libertinus,
 
-    http://scripts.sil.org/cms/scripts/page.php?item_id=Gentium_basic
+    https://github.com/alerque/libertinus/releases
 
 You can of course pick a different font, but that may alter the
 pagination somewhat.  You'll want to look through the document for
