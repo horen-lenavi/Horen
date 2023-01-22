@@ -60,7 +60,7 @@
 
 % Better sectioning for this document.
 \usepackage[compact,rigidchapters,explicit]{titlesec}
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{4}
 
 \titleformat{\chapter}[display]
  {\normalfont\Large\filcenter}
@@ -86,6 +86,9 @@
 
 \titleformat{\subsubsection}[runin]{\normalfont\bfseries\small}{\thesubsubsection.}{.5em}{}[ { }]
 \titlespacing{\subsubsection}{1ex}{1.5ex plus .1ex minus .2ex}{0pt}
+
+\titleformat{\paragraph}[runin]{\normalfont\bfseries\small}{\theparagraph.}{.5em}{}[ { }]
+\titlespacing{\paragraph}{1ex}{1.5ex plus .1ex minus .2ex}{0pt}
 
 % For interlinears.
 \usepackage{gb4e}
